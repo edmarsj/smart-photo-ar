@@ -8,22 +8,7 @@ public class GhostManager : MonoBehaviour
     [SerializeField] private Vector3 initialPosition;
     [SerializeField] private Vector3 initialRotation;
     [SerializeField] private Transform carSolid;
-    [SerializeField] private Transform carGhost;
     [SerializeField] private PhotoPosition positionToPreview;
-
-    public static GhostManager Instance { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
 
     private void Start()
@@ -60,8 +45,11 @@ public class GhostManager : MonoBehaviour
 
     public void Reset()
     {
-        carSolid.transform.localPosition = initialPosition;
-        carSolid.transform.localRotation = Quaternion.Euler(initialRotation);
+        if (carSolid != null)
+        {
+            carSolid.transform.localPosition = initialPosition;
+            carSolid.transform.localRotation = Quaternion.Euler(initialRotation);
+        }
     }
 
 #if UNITY_EDITOR
