@@ -393,8 +393,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718094278}
+  - component: {fileID: 718094279}
   m_Layer: 0
-  m_Name: Content
+  m_Name: PhotoSelect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,6 +424,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718094279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718094277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62914a5230be7ac4996a09dc6a59c9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &837239543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,49 +609,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2855300081300240463}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1746203383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1746203385}
-  - component: {fileID: 1746203384}
-  m_Layer: 0
-  m_Name: PhotoSelect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1746203384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746203383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62914a5230be7ac4996a09dc6a59c9fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1746203385
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746203383}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 356.27707, y: 339.44296, z: -112.98655}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &34307788973815329
 Transform:
   m_ObjectHideFlags: 0
@@ -787,7 +757,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 0}
-  Selected: 0
 --- !u!60 &2622365343834999432
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -851,7 +820,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 0}
-  Selected: 0
 --- !u!60 &2715652723036895140
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -914,7 +882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 0}
-  Selected: 0
 --- !u!60 &2811606696277022312
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -972,7 +939,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1746203384}
+      objectReference: {fileID: 718094279}
     - target: {fileID: 2855300080365848755, guid: 1f705ca76dbf9aa4c94ad922327b6dad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1192,7 +1159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 0}
-  Selected: 0
 --- !u!60 &5012443787962405920
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1363,7 +1329,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 0}
-  Selected: 0
 --- !u!60 &6989456077780781365
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1479,7 +1444,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 0}
-  Selected: 0
 --- !u!60 &8064050975591356238
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1593,7 +1557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 11400000, guid: 514be56a46cacb846ad09e2958960313, type: 2}
-  Selected: 0
 --- !u!60 &8355426410096288487
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1656,7 +1619,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 11400000, guid: bc80ffac86ba0864892359b247775d38, type: 2}
-  Selected: 0
 --- !u!60 &8660038832526322331
 PolygonCollider2D:
   m_ObjectHideFlags: 0

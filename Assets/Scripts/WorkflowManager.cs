@@ -15,9 +15,7 @@ public static class WorkflowManager
     }
 
     public static void SelectPhotos()
-    {
-        session.Photos.Clear();
-
+    {       
         SceneManager.LoadScene("PhotoSelect");
     }
 

@@ -2,10 +2,25 @@
 
 public class ButtonBehaviour : MonoBehaviour
 {
-    [SerializeField] private PhotoPosition position;
+    public PhotoPosition position;
     private SpriteRenderer sr;
+    private bool _selected = false;
 
-    public bool Selected = false;
+    public bool Selected
+    {
+        get => _selected;
+        set {
+            _selected = value;
+            if (value)
+            {
+                sr.color = Color.gray;
+            }
+            else
+            {
+                sr.color = Color.white;                
+            }
+        }
+    }
 
     private void Awake()
     {
@@ -21,14 +36,12 @@ public class ButtonBehaviour : MonoBehaviour
         {
             if (Selected)
             {
-                Selected = false;
-                sr.color = Color.white;
+                Selected = false;                
                 WorkflowManager.RemovePosition(position);
             }
             else
             {
-                Selected = true;
-                sr.color = Color.gray;
+                Selected = true;                
                 WorkflowManager.AddPosition(position);
             }
         }
