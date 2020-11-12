@@ -247,8 +247,7 @@ MonoBehaviour:
   initialPosition: {x: 0, y: 0, z: 0}
   initialRotation: {x: 0, y: 0, z: 0}
   carSolid: {fileID: 1993337556}
-  carGhost: {fileID: 1993337556}
-  positionToPreview: {fileID: 0}
+  positionToPreview: {fileID: 11400000, guid: bc80ffac86ba0864892359b247775d38, type: 2}
 --- !u!4 &655240521
 Transform:
   m_ObjectHideFlags: 0
@@ -464,22 +463,22 @@ PrefabInstance:
     - target: {fileID: 8465925898197576370, guid: d8dac20946209994296768612b2df904,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.001504341
+      value: 0.0009174303
       objectReference: {fileID: 0}
     - target: {fileID: 8465925898197576370, guid: d8dac20946209994296768612b2df904,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0094815595
+      value: 0.009556221
       objectReference: {fileID: 0}
     - target: {fileID: 8465925898197576370, guid: d8dac20946209994296768612b2df904,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.010154904
+      value: 0.07172855
       objectReference: {fileID: 0}
     - target: {fileID: 8465925898197576370, guid: d8dac20946209994296768612b2df904,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99990237
+      value: 0.997378
       objectReference: {fileID: 0}
     - target: {fileID: 8465925898197576370, guid: d8dac20946209994296768612b2df904,
         type: 3}
@@ -535,5 +534,4 @@ MonoBehaviour:
   initialPosition: {x: 0, y: 0, z: 0}
   initialRotation: {x: 0, y: 0, z: 0}
   carSolid: {fileID: 0}
-  carGhost: {fileID: 0}
   positionToPreview: {fileID: 0}
