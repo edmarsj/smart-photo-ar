@@ -2,21 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class PhotoSelectScene : MonoBehaviour
 {
-    public void Next()
-    {
-        WorkflowManager.TakePhotos();
-    }
 
-    public void Back()
-    {
-        WorkflowManager.Wellcome();
-    }
+    [SerializeField] private Button btnNext;
 
     private void Start()
-    {
+    {        
         var buttons = transform.GetComponentsInChildren<ButtonBehaviour>();
 
         foreach (var btn in buttons)
@@ -36,7 +30,35 @@ public class PhotoSelectScene : MonoBehaviour
             button.Selected = true;
         }
 
-
+        btnNext.interactable = WorkflowManager.session.Photos.Any();
     }
+
+    private void OnEnable()
+    {
+        WorkflowManager.OnItemSelectedChange += WorkflowManager_OnItemSelectedChange;
+    }
+
+    private void OnDisable()
+    {
+        WorkflowManager.OnItemSelectedChange -= WorkflowManager_OnItemSelectedChange;
+    }
+
+    private void WorkflowManager_OnItemSelectedChange(bool hasItemsSelected)
+    {
+        btnNext.interactable = hasItemsSelected;
+    }
+    
+
+    public void Next()
+    {
+        WorkflowManager.TakePhotos();
+    }
+
+    public void Back()
+    {
+        WorkflowManager.Wellcome();
+    }
+
+   
 
 }

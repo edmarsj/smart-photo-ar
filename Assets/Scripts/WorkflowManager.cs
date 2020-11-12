@@ -2,11 +2,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public delegate void NotifySelectedChanged(bool hasItemsSelected);
+
 public static class WorkflowManager
 {
     public static SessionData session = new SessionData();
     public static Texture2D ImageToReview;
     public static int CurrentPhoto;
+
+    public static event NotifySelectedChanged OnItemSelectedChange;
 
     internal static void NewSession(string text)
     {
@@ -57,6 +61,15 @@ public static class WorkflowManager
             PositionName = position.name,
             PositionObject = position
         });
+
+        OnItemSelectedChange?.Invoke(session.Photos.Count > 0);
+    }
+
+    public static void RemovePosition(PhotoPosition position)
+    {
+        session.Photos.RemoveAll(m => m.PositionName == position.name);
+
+        OnItemSelectedChange?.Invoke(session.Photos.Count > 0);
     }
 
     internal static void Finish()
@@ -70,14 +83,12 @@ public static class WorkflowManager
         SceneManager.LoadScene("Wellcome");
     }
 
-    public static void RemovePosition(PhotoPosition position)
-    {
-        session.Photos.RemoveAll(m => m.PositionName == position.name);
-    }
+   
 
     public static void ReviewPhoto(Texture2D image)
     {
         ImageToReview = image;
         SceneManager.LoadScene("PhotoReview");
     }
+    
 }
