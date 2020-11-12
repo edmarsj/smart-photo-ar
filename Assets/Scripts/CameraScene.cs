@@ -41,7 +41,7 @@ public class CameraScene : MonoBehaviour
     private void PositionToTakePhoto()
     {
         var total = WorkflowManager.session.Photos.Count();
-        title.text = $"Take photo {WorkflowManager.CurrentPhoto + 1} of {total}";
+        title.text = $"Align photo with silhouette - {WorkflowManager.CurrentPhoto + 1} of {total}";
         ghost.SetPosition(WorkflowManager.session.Photos[WorkflowManager.CurrentPhoto].PositionObject);
     }
 

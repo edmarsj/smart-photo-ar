@@ -19,6 +19,7 @@ public static class WorkflowManager
             if (string.IsNullOrWhiteSpace(session.Photos[i].FileName))
             {
                 CurrentPhoto = i;
+                break;
             }
         }
         SceneManager.LoadScene("Camera");
