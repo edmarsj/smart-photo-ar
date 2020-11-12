@@ -24,6 +24,7 @@ public class PhotoSelectScene : MonoBehaviour
             if (photoTaken.PositionName != null && photoTaken.PositionObject == null)
             {
                 photoTaken.PositionObject = Resources.Load<PhotoPosition>(photoTaken.PositionName);
+                Debug.Log(photoTaken.PositionObject);
             }
 
             var button = buttons.Single(b => b.position == photoTaken.PositionObject);

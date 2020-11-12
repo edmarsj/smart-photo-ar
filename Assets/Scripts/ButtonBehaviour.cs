@@ -4,7 +4,7 @@ public class ButtonBehaviour : MonoBehaviour
 {
     public PhotoPosition position;
     private SpriteRenderer sr;
-    private bool _selected = false;
+    private bool _selected;
 
     public bool Selected
     {

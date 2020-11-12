@@ -619,7 +619,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2715652723036895138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -114.1, y: 38.7, z: 144.54732}
+  m_LocalPosition: {x: -112.3, y: 38.7, z: 144.54732}
   m_LocalScale: {x: 57.083824, y: 57.083824, z: 57.083824}
   m_Children: []
   m_Father: {fileID: 718094278}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 2622365343834999431}
   - component: {fileID: 2622365343834999432}
   m_Layer: 0
-  m_Name: Layer 4
+  m_Name: RightBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca6016a4259743afed731836c0fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 0}
+  position: {fileID: 11400000, guid: 0b02c524f1d6f2749a40ba51ddffe55f, type: 2}
 --- !u!60 &2622365343834999432
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 2715652723036895139}
   - component: {fileID: 2715652723036895140}
   m_Layer: 0
-  m_Name: Layer 1
+  m_Name: FrontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,7 +821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca6016a4259743afed731836c0fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 0}
+  position: {fileID: 11400000, guid: e913699558c463b47824d267e1fa0b1d, type: 2}
 --- !u!60 &2715652723036895140
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 2811606696277022311}
   - component: {fileID: 2811606696277022312}
   m_Layer: 0
-  m_Name: Layer 3
+  m_Name: BackLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca6016a4259743afed731836c0fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 0}
+  position: {fileID: 11400000, guid: 14270696b43fcfc4786c812c83219a99, type: 2}
 --- !u!60 &2811606696277022312
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1172,7 +1172,7 @@ GameObject:
   - component: {fileID: 5012443787962405919}
   - component: {fileID: 5012443787962405920}
   m_Layer: 0
-  m_Name: Layer 2
+  m_Name: RightFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca6016a4259743afed731836c0fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 0}
+  position: {fileID: 11400000, guid: 50a67d73bf2e7044e86a97b5c11686fa, type: 2}
 --- !u!60 &5012443787962405920
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 6989456077780781364}
   - component: {fileID: 6989456077780781365}
   m_Layer: 0
-  m_Name: Layer 7
+  m_Name: BackRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca6016a4259743afed731836c0fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 0}
+  position: {fileID: 11400000, guid: 33d07e18d3d34ab43b31c0cb6e3a5bf3, type: 2}
 --- !u!60 &6989456077780781365
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 8064050975591356237}
   - component: {fileID: 8064050975591356238}
   m_Layer: 0
-  m_Name: Layer 8
+  m_Name: LeftBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca6016a4259743afed731836c0fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 0}
+  position: {fileID: 11400000, guid: dc4c85966a5f17843966300339698d3e, type: 2}
 --- !u!60 &8064050975591356238
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1570,7 +1570,7 @@ GameObject:
   - component: {fileID: 8355426410096288486}
   - component: {fileID: 8355426410096288487}
   m_Layer: 0
-  m_Name: Layer 5
+  m_Name: FrontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca6016a4259743afed731836c0fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 11400000, guid: 514be56a46cacb846ad09e2958960313, type: 2}
+  position: {fileID: 11400000, guid: 838c0b4bc26616b49a86db56c4a7158e, type: 2}
 --- !u!60 &8355426410096288487
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1632,7 +1632,7 @@ GameObject:
   - component: {fileID: 8660038832526322330}
   - component: {fileID: 8660038832526322331}
   m_Layer: 0
-  m_Name: Layer 6
+  m_Name: LeftFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccca6016a4259743afed731836c0fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 11400000, guid: bc80ffac86ba0864892359b247775d38, type: 2}
+  position: {fileID: 11400000, guid: 4f19ac372938c784f82c1fd57988d476, type: 2}
 --- !u!60 &8660038832526322331
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class GhostManager : MonoBehaviour
     public void SetPosition(PhotoPosition position)
     {
         carSolid.transform.localRotation = Quaternion.Euler(position.rotation);
-        carSolid.transform.localPosition = position.position;
+        carSolid.transform.position = position.position;
         //        StartCoroutine(SmoothRotate(position.rotation));
 
     }
@@ -47,7 +47,7 @@ public class GhostManager : MonoBehaviour
     {
         if (carSolid != null)
         {
-            carSolid.transform.localPosition = initialPosition;
+            carSolid.transform.position = initialPosition;
             carSolid.transform.localRotation = Quaternion.Euler(initialRotation);
         }
     }
@@ -59,7 +59,7 @@ public class GhostManager : MonoBehaviour
     {
         var asset = ScriptableObject.CreateInstance<PhotoPosition>();
         asset.rotation = carSolid.transform.rotation.eulerAngles;
-        asset.position = carSolid.transform.localPosition;
+        asset.position = carSolid.transform.position;
 
         CreateAsset("NewPosition", asset);
     }
