@@ -6,6 +6,8 @@ using UnityEngine.Android;
 
 public class DeviceCameraController : MonoBehaviour
 {
+    [SerializeField] private CameraScene cameraScene;
+
     private WebCamTexture phoneCamera;
     private GameObject surface;
     private void Awake()
@@ -24,29 +26,23 @@ public class DeviceCameraController : MonoBehaviour
 
     public void TakePhoto()
     {
-        var date = System.DateTime.Now.ToString("yyyyMMddHHmmss");
-        var fileName = string.Format("{0}{1}.png", Application.productName, date);
-
+#if !UNITY_EDITOR
         Texture2D snap = new Texture2D(phoneCamera.width, phoneCamera.height);
         try
-        {
+        {            
             snap.SetPixels(phoneCamera.GetPixels());
             snap.Apply();
 
-
-            NativeGallery.SaveImageToGallery(
-                snap, Application.productName, fileName);
+            cameraScene.ReviewPhoto(snap);
 
         }
         catch (Exception ex)
         {
             Debug.Log(ex.Message);
-        }
-        finally
-        {
-            Destroy(snap);
-            //uiController.ShowToast();
-        }
+        }    
+#else
+        cameraScene.ReviewPhoto(Resources.Load<Texture2D>("dummy"));
+#endif
     }
 
 }
