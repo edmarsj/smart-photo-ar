@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Wellcome.unity
+    guid: 2458c9b6c9c6d6349916176112c0e66f
+  - enabled: 1
     path: Assets/Scenes/PhotoSelect.unity
     guid: 78a7c40b80a37204a9aa9ba5d33cef3a
   - enabled: 1

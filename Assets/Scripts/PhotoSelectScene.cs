@@ -10,6 +10,11 @@ public class PhotoSelectScene : MonoBehaviour
         WorkflowManager.TakePhotos();
     }
 
+    public void Back()
+    {
+        WorkflowManager.Wellcome();
+    }
+
     private void Start()
     {
         var buttons = transform.GetComponentsInChildren<ButtonBehaviour>();

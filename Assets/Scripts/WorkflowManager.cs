@@ -1,8 +1,6 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 
 public static class WorkflowManager
 {
@@ -10,10 +8,18 @@ public static class WorkflowManager
     public static Texture2D ImageToReview;
     public static int CurrentPhoto;
 
-    public static void TakePhotos()
+    internal static void NewSession(string text)
     {
-        session.Rego = "Test";
+        session = new SessionData()
+        {
+            Rego = text
+        };
 
+        SceneManager.LoadScene("PhotoSelect");
+    }
+
+    public static void TakePhotos()
+    {       
         for (var i = 0; i < session.Photos.Count; i++)
         {
             if (string.IsNullOrWhiteSpace(session.Photos[i].FileName))
@@ -35,6 +41,8 @@ public static class WorkflowManager
                           jsonContent);
 
         Debug.Log(fileName);
+
+        SceneManager.LoadScene("Wellcome");
     }
 
     public static void SelectPhotos()
@@ -55,6 +63,11 @@ public static class WorkflowManager
     {
         CurrentPhoto = 0;
         SceneManager.LoadScene("Finish");
+    }
+
+    internal static void Wellcome()
+    {
+        SceneManager.LoadScene("Wellcome");
     }
 
     public static void RemovePosition(PhotoPosition position)
