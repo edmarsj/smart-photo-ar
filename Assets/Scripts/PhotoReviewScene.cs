@@ -34,7 +34,7 @@ public class PhotoReviewScene : MonoBehaviour
 
     public void Back()
     {
-
+        WorkflowManager.TakePhotos();
     }
 }
 
